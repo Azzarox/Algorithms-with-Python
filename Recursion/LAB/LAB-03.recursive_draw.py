@@ -6,7 +6,6 @@ number = int(input())
 # Which starts from the last number (which was 1) and goes upwards toward 5
 
 def draw(initial_value_n):
-
     def draw_figure(max_n):
         if max_n == 1:
             print("*" * max_n)
@@ -22,5 +21,6 @@ def draw(initial_value_n):
         return draw_figure_hash(n + 1, max_n)
 
     draw_figure(initial_value_n)
+
 
 draw(number)
