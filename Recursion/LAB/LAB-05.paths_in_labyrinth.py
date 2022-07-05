@@ -1,11 +1,12 @@
-cols = int(input())
 rows = int(input())
+cols = int(input())
 
 # labyrinth = [[input() for _ in range(rows)]] # matrix with list comprehension
 
 labyrinth = []
 for _ in range(rows):
     labyrinth.append(list(input()))
+
 
 # directions = dict({
 #     "R": (0, +1),
@@ -35,7 +36,6 @@ def find_all_paths(idx_row, idx_col, direction, matrix, path):
         print("".join(path))
     else:
         matrix[idx_row][idx_col] = 'v'  # first marks and then calls the recursion
-
 
         find_all_paths(idx_row, idx_col + 1, "R", matrix, path)
         find_all_paths(idx_row, idx_col - 1, "L", matrix, path)
